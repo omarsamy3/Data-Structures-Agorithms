@@ -136,26 +136,26 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //Console.WriteLine("After reversing(3-2-1), and the peek will be 3");
             //Console.WriteLine(queue.Peek());
 
-            ArrayQueue queue = new ArrayQueue(5);
+            //ArrayQueue queue = new ArrayQueue(5);
 
-            queue.print();
+            //queue.print();
             //Console.WriteLine("Is the queue empty: ");
             //Console.WriteLine(queue.isEmpty());
             //Console.WriteLine("Peek");
             ////Console.WriteLine(queue.peek());
             //Console.WriteLine("Is the queue full: ");
             //Console.WriteLine(queue.isFull());
-            queue.enqueue(10);
-            queue.enqueue(20);
-            queue.enqueue(30);
-            queue.enqueue(40);
-            queue.enqueue(50);
-            queue.dequeue();
-            queue.dequeue();
-            queue.dequeue();
-            queue.enqueue(60);
-            queue.print();
-            queue.enqueue(70);
+            //queue.enqueue(10);
+            //queue.enqueue(20);
+            //queue.enqueue(30);
+            //queue.enqueue(40);
+            //queue.enqueue(50);
+            //queue.dequeue();
+            //queue.dequeue();
+            //queue.dequeue();
+            //queue.enqueue(60);
+            //queue.print();
+            //queue.enqueue(70);
             //Console.WriteLine("Is the queue full: ");
             //Console.WriteLine(queue.isFull());
             //Console.WriteLine("Peek");
@@ -177,7 +177,16 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //Console.WriteLine("Is the queue full: ");
             //Console.WriteLine(queue.isFull());
 
-            queue.print();
+            //queue.print();
+
+            QueueWithTwoStacks queue = new QueueWithTwoStacks();
+
+            queue.enqueue(10);
+            queue.enqueue(20);
+            queue.enqueue(30);
+
+            var first = queue.dequeue();
+            Console.WriteLine(first);
         } 
     }
 }
