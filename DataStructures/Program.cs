@@ -124,17 +124,60 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //Console.WriteLine("*************************************");
             #endregion
 
-            Queue<int> queue = new Queue<int>();
-            queue.Enqueue(1);
-            queue.Enqueue(2);
-            queue.Enqueue(3);
+            //Queue<int> queue = new Queue<int>();
+            //queue.Enqueue(1);
+            //queue.Enqueue(2);
+            //queue.Enqueue(3);
 
-            Console.WriteLine("Before reversing(1-2-3), and the peek will be 1");
-            Console.WriteLine(queue.Peek());
-            Expression e = new Expression();
-            e.reverseQueue(queue);
-            Console.WriteLine("After reversing(3-2-1), and the peek will be 3");
-            Console.WriteLine(queue.Peek());
+            //Console.WriteLine("Before reversing(1-2-3), and the peek will be 1");
+            //Console.WriteLine(queue.Peek());
+            //Expression e = new Expression();
+            //e.reverseQueue(queue);
+            //Console.WriteLine("After reversing(3-2-1), and the peek will be 3");
+            //Console.WriteLine(queue.Peek());
+
+            ArrayQueue queue = new ArrayQueue(5);
+
+            queue.print();
+            //Console.WriteLine("Is the queue empty: ");
+            //Console.WriteLine(queue.isEmpty());
+            //Console.WriteLine("Peek");
+            ////Console.WriteLine(queue.peek());
+            //Console.WriteLine("Is the queue full: ");
+            //Console.WriteLine(queue.isFull());
+            queue.enqueue(10);
+            queue.enqueue(20);
+            queue.enqueue(30);
+            queue.enqueue(40);
+            queue.enqueue(50);
+            queue.dequeue();
+            queue.dequeue();
+            queue.dequeue();
+            queue.enqueue(60);
+            queue.print();
+            queue.enqueue(70);
+            //Console.WriteLine("Is the queue full: ");
+            //Console.WriteLine(queue.isFull());
+            //Console.WriteLine("Peek");
+            //Console.WriteLine(queue.peek());
+
+            //queue.print();
+            //Console.WriteLine("Is the queue empty: ");
+            //Console.WriteLine(queue.isEmpty());
+            //queue.dequeue(); //Remove 10
+            //queue.dequeue(); //Remove 20 
+            //queue.dequeue(); //Remove 30
+            //Console.WriteLine("Peek 40");
+            //Console.WriteLine(queue.peek());
+            //queue.dequeue(); //Remove 40
+            //queue.dequeue(); //Remove 50
+            //queue.dequeue(); //The queue is empty
+            //Console.WriteLine("Is the queue empty: ");
+            //Console.WriteLine(queue.isEmpty());
+            //Console.WriteLine("Is the queue full: ");
+            //Console.WriteLine(queue.isFull());
+
+            queue.print();
         } 
     }
 }
