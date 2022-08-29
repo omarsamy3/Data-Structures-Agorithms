@@ -179,14 +179,36 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
             //queue.print();
 
-            QueueWithTwoStacks queue = new QueueWithTwoStacks();
+            //QueueWithTwoStacks queue = new QueueWithTwoStacks();
 
-            queue.enqueue(10);
-            queue.enqueue(20);
-            queue.enqueue(30);
+            //queue.enqueue(10);
+            //queue.enqueue(20);
+            //queue.enqueue(30);
 
-            var first = queue.dequeue();
-            Console.WriteLine(first);
+            //var first = queue.dequeue();
+            //Console.WriteLine(first);
+
+            //PriorityQueue<int, int> PQueue = new PriorityQueue<int, int>();
+
+            //PQueue.Enqueue(1, 5);
+            //PQueue.Enqueue(4, 2);
+            //PQueue.Enqueue(2, 4);
+            //PQueue.Enqueue(3, 3);
+            //PQueue.Enqueue(5, 1);
+
+
+            //Console.WriteLine(PQueue.Peek());
+
+            PriorityQueue queue = new PriorityQueue(5);
+
+            queue.add(5);
+            queue.add(1);
+            queue.add(3);
+            queue.add(4);
+            queue.enqueue(2);
+
+            queue.dequeue();
+            Console.WriteLine(queue.toString());
         } 
     }
 }
