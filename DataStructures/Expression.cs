@@ -66,6 +66,24 @@ namespace DataStructures
             while (stack.Count > 0)
                 queue.Enqueue(stack.Pop());
         }
+
+        public static char GetFirstRepeatingChar(string input)
+        {
+            HashSet<char> chars = new HashSet<char>();
+            char result = 'c';
+            foreach (var item in input)
+            {
+                if (chars.Contains(item))
+                {
+                    result = item;
+                    break;
+                }
+                chars.Add(item);
+
+            }
+            return result;
+        }
+
         #endregion
 
         #region Private Methods
@@ -87,5 +105,6 @@ namespace DataStructures
         }
 
         #endregion
+
     }
 }

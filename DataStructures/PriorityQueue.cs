@@ -37,9 +37,9 @@ namespace DataStructures
         public void add(int item)
         {
             if (isFull()) throw new Exception("The queue is full");
-            int i;
-            ShiftingItems(item);
-            items[i + 1] = item;
+
+            int i = ShiftingItemsToInsert(item);
+            items[i] = item;
             count++;
          }
 
@@ -72,7 +72,8 @@ namespace DataStructures
 
         private void ShiftItemsToSort(int item)
         {
-            for (int i = count - 1; i >= 0; i--)
+            int i;
+            for (i = count - 1; i >= 0; i--)
             {
                 if (items[i] > item)
                 {
@@ -83,7 +84,7 @@ namespace DataStructures
             }
         }
 
-        private void ShiftingItems(int item)
+        private int ShiftingItemsToInsert(int item)
         {
             int i;
             for (i = count - 1; i >= 0; i--)
@@ -91,6 +92,7 @@ namespace DataStructures
                 if (items[i] > item) items[i + 1] = items[i];
                 else break;
             }
+            return i + 1;
         }
     }
 }
