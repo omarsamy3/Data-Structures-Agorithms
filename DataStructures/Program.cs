@@ -8,7 +8,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-            HashTable hash = new HashTable(5);
+            HashTable2 hash = new HashTable2();
 
             hash.put(1, "Omar");
             hash.put(2, "Ahmed");
@@ -25,12 +25,11 @@ namespace MyApp // Note: actual namespace depends on the project name.
             hash.put(12, "Essam");
 
             hash.remove(1);
-            hash.put(4, "Omar");
-
+            Console.WriteLine("The value at key 5 is: " + hash.get(5));
             hash.print();
 
-            var result = hash.get(1);
-            Console.WriteLine(result);
+            //var result = hash.get(1);
+           // Console.WriteLine(result);
             
         } 
     }
