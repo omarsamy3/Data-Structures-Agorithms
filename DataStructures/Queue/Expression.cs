@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataStructures
+namespace DataStructures.Queue
 {
     internal class Expression
     {
@@ -93,13 +93,13 @@ namespace DataStructures
         }
         private bool isRightEqualBracket(char c, char top)
         {
-            return (indexOf(c, rightBrackets) == indexOf(top, leftBrackets)) ;
+            return indexOf(c, rightBrackets) == indexOf(top, leftBrackets);
         }
         private int indexOf(char c, char[] arr)
         {
             for (int i = 0; i < arr.Length; i++)
             {
-                if(arr[i] == c) return i;
+                if (arr[i] == c) return i;
             }
             return -1;
         }

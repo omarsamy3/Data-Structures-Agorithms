@@ -1,10 +1,10 @@
-﻿ using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataStructures
+namespace DataStructures.Queue
 {
     internal class PriorityQueue
     {
@@ -28,10 +28,10 @@ namespace DataStructures
             if (item < items[count - 1])
             {
                 ShiftItemsToSort(item);
-                    count++;
-            } 
-            else items[count++] = item;  
-         }
+                count++;
+            }
+            else items[count++] = item;
+        }
 
         //Another factoring implementaion of the enqueue method
         public void add(int item)
@@ -41,7 +41,7 @@ namespace DataStructures
             int i = ShiftingItemsToInsert(item);
             items[i] = item;
             count++;
-         }
+        }
 
         public void dequeue()
         {
@@ -63,7 +63,7 @@ namespace DataStructures
         public string toString()
         {
             string result = "";
-            foreach(var item in items)
+            foreach (var item in items)
             {
                 result += item + " ";
             }

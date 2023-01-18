@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataStructures
+namespace DataStructures.HashTable
 {
     internal class HashTable
     {
@@ -62,19 +62,20 @@ namespace DataStructures
             Entry entry = new Entry(key, value);
 
             if (NotdublicatedOrFreeSpace(key)) addToTheHashTable(entry);
-            else  addToTheChainLinkedList(entry);
+            else addToTheChainLinkedList(entry);
         }
 
         public string get(int key)
-        { int count = 0;
-            foreach(var entry in array)
+        {
+            int count = 0;
+            foreach (var entry in array)
             {
-                if(entry != null)
-                if (entry.key == key) return entry.value;
+                if (entry != null)
+                    if (entry.key == key) return entry.value;
 
-                foreach(var list in list[count++])
+                foreach (var list in list[count++])
                 {
-                    if(list.key == key) return list.value;
+                    if (list.key == key) return list.value;
                 }
             }
             return null;
@@ -124,7 +125,7 @@ namespace DataStructures
 
         private bool NotdublicatedOrFreeSpace(int key)
         {
-            return (!this.ContainsKey(key) && keysCount < array.Length);
+            return !ContainsKey(key) && keysCount < array.Length;
         }
 
         private void addToTheHashTable(Entry entry)

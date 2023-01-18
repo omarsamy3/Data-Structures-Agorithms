@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataStructures
+namespace DataStructures.HashTable
 {
     public class HashTable2
     {
         private class Entry
         {
             public int key;
-            public String value;
+            public string value;
 
-            public Entry(int key, String value)
+            public Entry(int key, string value)
             {
                 this.key = key;
                 this.value = value;
@@ -27,7 +27,7 @@ namespace DataStructures
         /// </summary>
         /// <param name="key"></param>
         /// <param name="value"></param>
-        public void put(int key, String value)
+        public void put(int key, string value)
         {
             var entry = getEntry(key);
             if (entry != null)
@@ -36,7 +36,7 @@ namespace DataStructures
                 return;
             }
             Entry e = new Entry(key, value);
-            LinkedList<Entry>  bu =  getOrCreateBucket(key);
+            LinkedList<Entry> bu = getOrCreateBucket(key);
             bu.AddLast(e);
         }
 
@@ -45,11 +45,11 @@ namespace DataStructures
         /// </summary>
         /// <param name="key"></param>
         /// <returns>The entity at <paramref name="key"/> if exists, or null if not.</returns>
-        public String get(int key)
+        public string get(int key)
         {
             var entry = getEntry(key);
 
-            return (entry == null) ? null : entry.value;
+            return entry == null ? null : entry.value;
         }
 
         /// <summary>
@@ -109,22 +109,22 @@ namespace DataStructures
             return null;
         }
 
-		/// <summary>
-		/// Get the index of the entries depending on the <paramref name="key"/> value
-		/// </summary>
-		/// <param name="key"></param>
-		/// <returns>the index of the comming entry, from this formula <paramref name="key"/> % entries.Length</returns>
-		private int hash(int key)
+        /// <summary>
+        /// Get the index of the entries depending on the <paramref name="key"/> value
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns>the index of the comming entry, from this formula <paramref name="key"/> % entries.Length</returns>
+        private int hash(int key)
         {
             return key % entries.Length;
         }
 
         public void print()
         {
-            foreach(var bucket in entries)
+            foreach (var bucket in entries)
             {
                 Console.Write("[");
-                foreach(Entry entry in bucket)
+                foreach (Entry entry in bucket)
                 {
                     Console.Write("(" + entry.key + ", " + entry.value + ")");
                 }

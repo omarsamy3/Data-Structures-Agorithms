@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataStructures
+namespace DataStructures.Queue
 {
     internal class QueueWithTwoStacks
     {
@@ -34,7 +34,7 @@ namespace DataStructures
 
         public bool isEmpty()
         {
-            return (Stack1.Count == 0 && Stack2.Count == 0);
+            return Stack1.Count == 0 && Stack2.Count == 0;
         }
 
         private void MoveStack1ToStack2()

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Linq;
 
-namespace DataStructures
+namespace DataStructures.LinkedList
 {
     public class LinkedList
     {
@@ -124,7 +124,7 @@ namespace DataStructures
             if (first == null) Console.WriteLine("The linked list is empty");
             else
             {
-                var array = this.toArray();
+                var array = toArray();
                 Console.Write("[");
                 for (int i = 0; i < array.Length; i++)
                 {
@@ -160,7 +160,7 @@ namespace DataStructures
         {
             var target = first;
             var position = first;
-            if (isEmpty() || k <= 0 || k > size) throw (new Exception("Unvalid Input"));
+            if (isEmpty() || k <= 0 || k > size) throw new Exception("Unvalid Input");
             else
             {
                 var index = size;
