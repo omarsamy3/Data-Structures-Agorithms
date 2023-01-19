@@ -1,6 +1,8 @@
-﻿using DataStructures.HashTable;
+﻿using DataStructures;
+using DataStructures.HashTable;
 using DataStructures.Tree;
 using System;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace MyApp // Note: actual namespace depends on the project name.
@@ -21,7 +23,14 @@ namespace MyApp // Note: actual namespace depends on the project name.
 			tree.insert(8);
 			tree.insert(10);
 
+			Helper.print("Insert nodes", "Print the tree after inserting the numbers 1-10 in different orders");
 			tree.Root.Print();
+
+			Helper.print("Find a node", "Try to find 5, 1, 10, 11, which should return true, true, true, flase");
+			Console.WriteLine(tree.find(5));
+			Console.WriteLine(tree.find(1));
+			Console.WriteLine(tree.find(10));
+			Console.WriteLine(tree.find(11));
 		}
 
 		private static void TryHashTable()
