@@ -31,6 +31,15 @@ namespace MyApp // Note: actual namespace depends on the project name.
 			Console.WriteLine(tree.find(1));
 			Console.WriteLine(tree.find(10));
 			Console.WriteLine(tree.find(11));
+
+			Helper.print("Depth First Traverse", "Traverse throght the tree, Pre_Order appreach");
+			tree.Pre_Order_Traverse();
+
+			Helper.print("Depth First Traverse", "Traverse throght the tree, In_Order appreach");
+			tree.In_Order_Traverse();
+
+			Helper.print("Depth First Traverse", "Traverse throght the tree, Post_Order appreach");
+			tree.Post_Order_Traverse();
 		}
 
 		private static void TryHashTable()
