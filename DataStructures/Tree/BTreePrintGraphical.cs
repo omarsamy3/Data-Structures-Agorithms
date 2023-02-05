@@ -19,6 +19,12 @@ namespace DataStructures.Tree
 				public NodeInfo Parent, Left, Right;
 			}
 
+		/// <summary>
+		/// Extension method for <para BinaryNode></para> class, to print the tree.
+		/// </summary>
+		/// <param name="root"></param>
+		/// <param name="topMargin"></param>
+		/// <param name="leftMargin"></param>
 			public static void Print(this BinaryNode root, int topMargin = 2, int leftMargin = 2)
 			{
 				if (root == null) return;
