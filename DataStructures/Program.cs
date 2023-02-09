@@ -27,6 +27,18 @@ namespace MyApp // Note: actual namespace depends on the project name.
 				tree.insert(8);
 				tree.insert(10);
 
+				BinaryTree treeToCompare = new BinaryTree();
+				treeToCompare.insert(5);
+				treeToCompare.insert(3);
+				treeToCompare.insert(4);
+				treeToCompare.insert(2);
+				treeToCompare.insert(7);
+				treeToCompare.insert(1);
+				treeToCompare.insert(6);
+				treeToCompare.insert(9);
+				treeToCompare.insert(8);
+				treeToCompare.insert(10);
+
 				Helper.print("Insert nodes", "Print the tree after inserting the numbers 1-10 in different orders");
 				tree.Root.Print();
 
@@ -53,6 +65,11 @@ namespace MyApp // Note: actual namespace depends on the project name.
 				
 				Helper.print("Maximum value", "Get the Maximum value in the tree.");
 				Console.WriteLine(tree.MaxValue());
+
+				Helper.print("Equality", "Check the equality for two trees.");
+				tree.Root.Print();
+				treeToCompare.Root.Print();
+				Console.WriteLine(tree.equals(treeToCompare));
 			}
 		}
 

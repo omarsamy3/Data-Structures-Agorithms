@@ -109,7 +109,6 @@ namespace DataStructures.Tree
 		{
 			return height(Root);
 		}
-
 		public int MinValue()
 		{
 			return MinValue(root);
@@ -121,12 +120,12 @@ namespace DataStructures.Tree
 
 		public int MinValueBST()
 		{
-			if(root == null) throw new NullReferenceException();
+			if (root == null) throw new NullReferenceException();
 
 			var current = root;
 			var last = current;
-			
-			while(current != null)
+
+			while (current != null)
 			{
 				last = current;
 				current = current.leftChild;
@@ -147,8 +146,34 @@ namespace DataStructures.Tree
 			}
 			return last.value;
 		}
+		/// <summary>
+		/// Check the equality of two trees.
+		/// </summary>
+		/// <param name="tree"></param>
+		/// <returns>True, if this tree is equal to the given <paramref name="tree"/>. otherwise, false.</returns>
+		public bool equals(BinaryTree tree)
+		{
+			if (tree == null) return false;
+			return equals(this.root, tree.root);
+		}
 
 		#region Private Methods
+		/// <summary>
+		/// Check the equality of two nodes.
+		/// </summary>
+		/// <param name="first"></param>
+		/// <param name="second"></param>
+		/// <returns>True, if the tree of <paramref name="first"/> node is equal to <paramref name="second"/> one.otherwise, false.</returns>
+		private bool equals(BinaryNode first, BinaryNode second)
+		{
+			if (first == null && second == null) return true;
+
+			if (first != null && second != null) return first.value == second.value&&
+			equals(first.leftChild, second.leftChild)&&
+			equals(first.rightChild, second.rightChild);
+
+			return false;
+		}
 		private bool IsLeaf(BinaryNode root)
 		{			
 			return root.leftChild == null && root.rightChild == null;
