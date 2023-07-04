@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataStructures
+namespace DataStructures.Stack
 {
     internal class Stack
     {
-        private int[] stack = new int[10]; 
+        private int[] stack = new int[10];
         private int Index = 0;
 
         public void push(int item)
@@ -38,14 +38,14 @@ namespace DataStructures
 
         private bool isFull()
         {
-            return (Index == stack.Length) ; // True if is full
+            return Index == stack.Length; // True if is full
         }
 
         public void print()
         {
             if (isEmpty()) Console.WriteLine("The stack is empty");
-            for(int i = 0; i < Index; i++)
-            Console.WriteLine(stack[Index -  1 - i]);
+            for (int i = 0; i < Index; i++)
+                Console.WriteLine(stack[Index - 1 - i]);
         }
     }
 }

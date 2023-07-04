@@ -13,7 +13,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
 		{
 			TryBinaryTree();
 
-			static void TryBinaryTree()
+		}
+		static void TryBinaryTree()
 			{
 				BinaryTree tree = new BinaryTree();
 				tree.insert(5);
@@ -71,9 +72,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
 				treeToCompare.Root.Print();
 				Console.WriteLine(tree.equals(treeToCompare));
 			}
-		}
 
-		private static void TryHashTable()
+		static void TryHashTable()
 		{
 			HashTable2 hash = new HashTable2();
 

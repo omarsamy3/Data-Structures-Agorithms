@@ -10,71 +10,57 @@ namespace DataStructures.Array
     public class _Array
     {
         private int[] items;
-        private static int Count;
+        private static int count;
 
         public _Array()
         {
             items = new int[10];
-            Count = 0;
+            count = 0;
         }
         public _Array(int length)
         {
             items = new int[length];
-            Count = 0;
+            count = 0;
         }
 
 
         public void Insert(int item)
         {
-            //Check if the array is full, resize it.
-            if (Count < items.Length) //Not full
+            if (count == items.Length) //Full Array, resize.
             {
-                items[Count] = item;
-                Count++;
-            }
-            //Full
-            else
-            {
-                //Make a new array to copy items and swap again.
-                int[] newItems = new int[Count * 2];
-                for (int i = 0; i < Count; i++)
-                {
+                int[] newItems = new int[count * 2];
+
+                for (int i = 0; i < count; i++) //Refilling.
                     newItems[i] = items[i];
-                }
-                newItems[Count] = item;
-                items = newItems; //Swap
-                Count++;
+                
+                items = newItems; //Swapping
             }
 
+            items[count++] = item;
         }
 
         public void RemoveAt(int index)
         {
             //Validate the index.
-            if (index < Count && index >= 0)
-            {
-                for (int i = index; i < Count; i++)
-                    items[i] = items[i + 1]; //Shift the elements
-                Count--;
-            }
-            else
-            {
-                Console.WriteLine("The item is out of the range");
-            }
+            if (index > count && index <= 0)
+				throw new ArgumentOutOfRangeException
+                    ("The item is out of the range");
+			
+			for (int i = index; i < count; i++)
+                items[i] = items[i + 1]; //Shift the elements
 
+            count--;
         }
 
         public int ItemAt(int index)
         {
-            if (index < Count)
+            if (index < count)
             {
-                Console.WriteLine("*****************");
                 Console.Write($"items[{index}]: ");
                 return items[index];
             }
             else
             {
-                Console.WriteLine("*****************");
                 Console.WriteLine("Our of Range");
                 return -1;
             }
@@ -82,22 +68,21 @@ namespace DataStructures.Array
 
         public int IndexOf(int item)
         {
-            for (int i = 0; i < Count; i++)
+            for (int i = 0; i < count; i++)
             {
                 if (items[i] == item)
                 {
-                    Console.WriteLine("*****************");
                     Console.Write($"IndexOf[{item}]: ");
                     return i;
                 }
             }
-            Console.WriteLine("*****************");
             Console.WriteLine("Our of Range");
             return -1;
         }
+
         public void Print()
         {
-            for (int i = 0; i < Count; i++)
+            for (int i = 0; i < count; i++)
             {
                 Console.WriteLine(items[i]);
             }
