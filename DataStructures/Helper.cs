@@ -20,7 +20,7 @@ namespace DataStructures
 			Console.WriteLine($"{new string('-', description.Length * 2)}");
 			Console.WriteLine($"{new string(' ', (description.Length - (title.Length + 2) / 2))}|{title}|");
 			Console.WriteLine($"{new string(' ', description.Length / 2)}{description}");
-			Console.WriteLine($"{new string('-', description.Length * 2)}\n\n\n");
+			Console.WriteLine($"{new string('-', description.Length * 2)}\n");
 		}
 	}
 }

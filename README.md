@@ -61,3 +61,51 @@ To overcome these limitations, dynamic array implementations like ArrayList in J
 
 Overall, arrays are a fundamental building block in programming, offering fast and efficient access to elements and enabling a wide range of data processing and storage tasks.
 ![ArrayONotation](https://github.com/omarsamy3/Data-Structures-Agorithms/assets/76973221/b5cde9d3-78d5-49ad-8fa3-6a55072ad5d2)
+
+### LinkedList
+The LinkedList data structure is a popular linear data structure used in computer programming. Unlike arrays, which use contiguous memory locations to store elements, a linked list consists of individual nodes, each containing a value and a reference (or link) to the next node in the sequence.
+
+Here are some key characteristics and operations associated with linked lists:
+
+1. `Dynamic size`: Linked lists have a dynamic size and can grow or shrink as elements are added or removed. They do not have a fixed size limitation like arrays.
+
+2. `Node structure`: Each node in a linked list contains two components: the value of the element and a reference (or pointer) to the next node in the sequence. The last node typically points to null, indicating the end of the list.
+
+3. `Insertion and deletion`: Adding or removing elements in a linked list is efficient, especially at the beginning or end. To insert a new node, the link of the previous node is redirected to the new node, and the new node's link is set to the next node. To delete a node, the link of the previous node is adjusted to skip the deleted node.
+
+4. `Sequential access`: Linked lists provide sequential access to elements, meaning elements are accessed sequentially from the first node to the last node. Random access to specific elements, as in arrays, is not as efficient in linked lists.
+
+5. `Singly linked list vs. doubly linked list`: In a singly linked list, each node contains a reference to the next node, allowing traversal in only one direction. In contrast, a doubly linked list has nodes with references to both the next and previous nodes, enabling bidirectional traversal.
+
+6. `Circular linked list`: A circular linked list is a variant where the last node's reference points back to the first node, forming a loop. This allows continuous traversal without a definite end.
+
+Linked lists offer several `advantages` and `use cases`:
+
+- `Dynamic size`: Linked lists are efficient for situations where the size of the collection can change frequently, as they can easily grow or shrink as needed.
+
+- `Insertion and deletion`: Linked lists excel in scenarios where frequent insertions or deletions occur, especially at the beginning or end of the list, as it only requires adjusting the links.
+
+- `Memory efficiency`: Linked lists use memory more flexibly compared to arrays, as each node only requires memory for its value and the link to the next node.
+
+However, linked lists also have some `drawbacks`:
+
+- `Sequential access`: Random access to specific elements in a linked list is not efficient, as each element must be traversed from the beginning until reaching the desired position.
+
+- `Extra memory overhead`: Linked lists require additional memory to store the link/reference for each node, which can increase memory consumption compared to arrays.
+
+- `Lack of direct access`: Unlike arrays, linked lists do not offer constant-time random access based on indices. Accessing an element at a particular position may require traversing the list from the beginning.
+
+It's important to choose the appropriate data structure based on the specific requirements of your application. Linked lists are commonly used in scenarios where frequent insertion or deletion of elements is needed or when the collection size is expected to change dynamically.
+
+### LinkedList vs Array
+|                  | Arrays                         | Linked Lists                                |
+| ---------------- | ------------------------------ | ------------------------------------------- |
+| Memory           | Contiguous block of memory     | Individual nodes with memory for value/link |
+| Size             | Fixed size                     | Dynamic size                                |
+| Insertion        | Costly for middle elements     | Efficient, especially at beginning/end      |
+| Deletion         | Costly for middle elements     | Efficient, especially at beginning/end      |
+| Random Access    | Efficient (O(1))              | Inefficient (O(n)), sequential traversal   |
+| Memory Overhead  | Minimal                        | Extra memory for links                      |
+| Memory Utilization | May waste memory if not fully utilized | Flexible memory usage                     |
+| Implementation    | Simpler                         | Requires maintaining links between nodes    |
+| Usage            | When size is known and access by index is important | When dynamic size and efficient insertions/deletions are required |

@@ -49,7 +49,7 @@ namespace DataStructures.LinkedList
             if (isEmpty()) first = last = node;
             else
             {
-                first.next = node;
+                node.next = first;
                 first = node;
             }
             size++;
@@ -77,15 +77,27 @@ namespace DataStructures.LinkedList
 
         public void removeFirst()
         {
-            var temp = first;
-            first = null;
-            first = temp.next;
+            if (isEmpty()) 
+                throw new Exception("No such element, the list is empty");
+
+            //If only one element.
+            if (first == last)
+                first = last = null;
+            else
+            {
+				var second = first.next;
+				first = null;
+				first = second;
+			}
+
             size--;
         }
 
         public void removeLast()
         {
             if (isEmpty()) { Console.WriteLine("The list is empty"); return; }
+            
+            //If only one item.
             else if (first.next == null)
             {
                 first = last = null;

@@ -1,5 +1,7 @@
 ﻿using DataStructures;
+using DataStructures.Array;
 using DataStructures.HashTable;
+using DataStructures.LinkedList;
 using DataStructures.Tree;
 using System;
 using System.Runtime.CompilerServices;
@@ -11,7 +13,10 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
 		{
-			TryBinaryTree();
+			//TryArray();
+			TryLinkedList();
+			//TryHashTable();
+			//TryBinaryTree();
 
 		}
 		static void TryBinaryTree()
@@ -94,6 +99,47 @@ namespace MyApp // Note: actual namespace depends on the project name.
 			hash.remove(1);
 			Console.WriteLine("The value at key 5 is: " + hash.get(5));
 			hash.print();
+		}
+
+		static void TryArray()
+		{
+			var array = new _Array();
+			array.Insert(10);
+			array.Insert(20);
+			array.Insert(30);
+			array.Insert(40);
+			Helper.print("Array First Test", "This array should have elements 10 - 20 - 30 - 40");
+			array.Print();
+			array.RemoveAt(2);
+			Helper.print("Array Second Test", "This array should have elements 10 - 20 - 40");
+			array.Print();
+			Helper.print("Array Third Test", "Index of 40 should be 2");
+			Console.WriteLine(array.IndexOf(40));
+			
+		}
+
+		static void TryLinkedList()
+		{
+			var linkedList = new LinkedList();
+
+			linkedList.addLast(10);
+			linkedList.addLast(20);
+			linkedList.addLast(30);
+			linkedList.addLast(40);
+			Helper.print("LinkedList First Test", "Should be: [10, 20, 30, 40]");
+			linkedList.print();
+			Helper.print("LinkedList Second Test", "Should be: [0, 10, 20, 30, 40]");
+			linkedList.addFirst(0);
+			linkedList.print();
+			Helper.print("LinkedList Third Test", "Should be: 1, true, false, 5");
+            Console.WriteLine(linkedList.indexOf(10));
+            Console.WriteLine(linkedList.contains(20));
+            Console.WriteLine(linkedList.contains(50));
+            Console.WriteLine(linkedList.Size());
+			linkedList.print();
+			Helper.print("LinkedList Forth Test", "Should be: [10, 20, 30, 40]");
+			linkedList.removeFirst();
+			linkedList.print();
 		}
 	}
 }

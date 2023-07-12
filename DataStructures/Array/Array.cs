@@ -82,10 +82,17 @@ namespace DataStructures.Array
 
         public void Print()
         {
-            for (int i = 0; i < count; i++)
-            {
-                Console.WriteLine(items[i]);
-            }
-        }
+            var array = items;
+			Console.Write("[");
+			for (int i = 0; i < count; i++)
+			{
+				if (i < count - 1)
+					Console.Write(array[i] + ", ");
+				else
+					Console.Write(array[i]);
+
+			}
+			Console.WriteLine("]");
+		}
     }
 }
