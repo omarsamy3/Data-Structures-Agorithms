@@ -97,6 +97,8 @@ However, linked lists also have some `drawbacks`:
 
 It's important to choose the appropriate data structure based on the specific requirements of your application. Linked lists are commonly used in scenarios where frequent insertion or deletion of elements is needed or when the collection size is expected to change dynamically.
 
+![Array Vs LinkedList](https://github.com/omarsamy3/Data-Structures-Agorithms/assets/76973221/4a48cc70-1e0b-4aa0-bb48-2f8f98370286)
+
 ### LinkedList vs Array
 |                  | Arrays                         | Linked Lists                                |
 | ---------------- | ------------------------------ | ------------------------------------------- |
