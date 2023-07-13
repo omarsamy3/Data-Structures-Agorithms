@@ -140,6 +140,17 @@ namespace MyApp // Note: actual namespace depends on the project name.
 			Helper.print("LinkedList Forth Test", "Should be: [10, 20, 30, 40]");
 			linkedList.removeFirst();
 			linkedList.print();
-		}
+			Helper.print("LinkedList Fifth Test", "Should be: [10, 20, 30, 40, 50, 60], middle: (30, 40)");
+			linkedList.addLast(50);
+			linkedList.addLast(60);
+			linkedList.print();
+			linkedList.printMiddle();
+			Helper.print("LinkedList Sixth Test", "Should be: [60, 50, 40, 30, 20, 10]");
+			linkedList.reverse();
+			linkedList.print();
+			Helper.print("LinkedList Seventh Test", "The 3th element from the end should be: 30");
+			Console.WriteLine(linkedList.getKthFromTheEnd(3));
+
+        }
 	}
 }

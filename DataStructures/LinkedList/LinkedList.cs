@@ -124,8 +124,7 @@ namespace DataStructures.LinkedList
             int index = 0;
             while (current != null)
             {
-                arr[index] = current.value;
-                index++;
+                arr[index++] = current.value;
                 current = current.next;
             }
             return arr;
@@ -162,31 +161,31 @@ namespace DataStructures.LinkedList
                 previous = current;
                 current = next;
             }
+
             first.next = null;
             last = first;
             first = previous;
-
         }
 
         public int getKthFromTheEnd(int k)
         {
             var target = first;
             var position = first;
-            if (isEmpty() || k <= 0 || k > size) throw new Exception("Unvalid Input");
+            if (isEmpty() || k <= 0 || k > size) 
+                throw new Exception("Unvalid Position");
             else
             {
-                var index = size;
+                //Make the position-target distance = k - 1
                 for (int i = 0; i < k - 1; i++)
                 {
                     position = position.next;
                 }
-
-                while (position != null)
+                
+                //Move the two pointers until find the target.
+                while (position != last)
                 {
-                    if (index == k) break;
                     position = position.next;
                     target = target.next;
-                    index--;
                 }
                 return target.value;
             }
