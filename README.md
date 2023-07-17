@@ -144,3 +144,4 @@ Stacks have a variety of applications and are used in numerous algorithms and sc
 - `Balancing parentheses`: Stacks can help check and balance parentheses, brackets, and other symbols in an expression.
 
 Stacks offer simplicity and efficiency for managing elements in a Last-In-First-Out manner. The LIFO property allows for straightforward handling of nested structures and tracking of program flow. Understanding and utilizing stacks effectively can greatly enhance problem-solving capabilities in various domains.
+![Stacks](https://github.com/omarsamy3/Data-Structures-Agorithms/assets/76973221/eb0e0ff8-5384-4722-a440-cafe50d8c5f7)
