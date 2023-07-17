@@ -6,42 +6,40 @@ using System.Threading.Tasks;
 
 namespace DataStructures.Stack
 {
-    internal class Stack
+    public static class Stack
     {
-        private int[] stack = new int[10];
-        private int Index = 0;
+        private static int[] stack = new int[10];
+        private static int Index = 0;
 
-        public void push(int item)
+		public static void push(int item)
         {
-            if (isFull()) stack[Index++] = item;
+            if (!isFull()) stack[Index++] = item;
             else throw new StackOverflowException();
         }
 
-        public int pop()
+        public static int pop()
         {
             if (isEmpty()) throw new Exception("The stack is empty");
-            int temp = stack[Index];
-            stack[--Index] = 0;
-            return temp;
+            return stack[--Index];
         }
 
-        public int peek()
+        public static int peek()
         {
             if (isEmpty()) throw new Exception("The stack is empty");
             return stack[Index - 1];
         }
 
-        public bool isEmpty()
+        private static bool isEmpty()
         {
             return Index == 0;
         }
 
-        private bool isFull()
+        private static bool isFull()
         {
             return Index == stack.Length; // True if is full
         }
 
-        public void print()
+        public static void print()
         {
             if (isEmpty()) Console.WriteLine("The stack is empty");
             for (int i = 0; i < Index; i++)

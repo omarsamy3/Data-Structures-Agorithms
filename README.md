@@ -111,3 +111,36 @@ It's important to choose the appropriate data structure based on the specific re
 | Memory Utilization | May waste memory if not fully utilized | Flexible memory usage                     |
 | Implementation    | Simpler                         | Requires maintaining links between nodes    |
 | Usage            | When size is known and access by index is important | When dynamic size and efficient insertions/deletions are required |
+
+### Stack
+The stack data structure is a fundamental and widely used data structure in computer science. It follows the Last-In-First-Out (LIFO) principle, meaning that the last element inserted is the first one to be removed. Think of it as a stack of items where you can only add or remove items from the top.
+
+Here are some key characteristics and operations associated with stacks:
+
+1. `Push`: Adding an element to the top of the stack is known as a push operation. The new element becomes the top of the stack.
+
+2. `Pop`: Removing the topmost element from the stack is called a pop operation. The element that was added last is the first one to be removed.
+
+3. `Peek` or Top: Accessing the topmost element without removing it is often referred to as peek or top operation.
+
+4. `Empty`: A stack is considered empty when it contains no elements.
+
+5. `Size`: The size of the stack refers to the number of elements currently in the stack.
+
+6. `Overflow and Underflow`: A stack can be limited in size, and attempting to push an element when the stack is already full results in an overflow. Conversely, attempting to pop an element from an empty stack results in an underflow.
+
+7. `Implementation`: Stacks can be implemented using arrays or linked lists. Both approaches have their advantages and considerations, such as dynamic resizing in linked lists and fixed capacity in arrays.
+
+Stacks have a variety of applications and are used in numerous algorithms and scenarios, including:
+
+- `Function call stack`: Stacks are used to manage function calls and their corresponding return addresses in programming languages.
+
+- `Expression evaluation`: Stacks are used to evaluate expressions, such as infix, postfix, and prefix notations, by maintaining the order of operations.
+
+- `Undo/Redo functionality`: Stacks can be used to implement undo/redo operations, allowing users to revert or replay actions.
+
+- `Backtracking algorithms`: Stacks are useful in backtracking algorithms, such as depth-first search (DFS), where the stack is used to keep track of visited nodes or states.
+
+- `Balancing parentheses`: Stacks can help check and balance parentheses, brackets, and other symbols in an expression.
+
+Stacks offer simplicity and efficiency for managing elements in a Last-In-First-Out manner. The LIFO property allows for straightforward handling of nested structures and tracking of program flow. Understanding and utilizing stacks effectively can greatly enhance problem-solving capabilities in various domains.

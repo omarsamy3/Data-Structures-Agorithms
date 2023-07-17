@@ -2,6 +2,7 @@
 using DataStructures.Array;
 using DataStructures.HashTable;
 using DataStructures.LinkedList;
+using DataStructures.Stack;
 using DataStructures.Tree;
 using System;
 using System.Runtime.CompilerServices;
@@ -14,11 +15,15 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static void Main(string[] args)
 		{
 			//TryArray();
-			TryLinkedList();
+			//TryLinkedList();
+			TryStack();
 			//TryHashTable();
 			//TryBinaryTree();
 
 		}
+
+		
+
 		static void TryBinaryTree()
 			{
 				BinaryTree tree = new BinaryTree();
@@ -151,6 +156,24 @@ namespace MyApp // Note: actual namespace depends on the project name.
 			Helper.print("LinkedList Seventh Test", "The 3th element from the end should be: 30");
 			Console.WriteLine(linkedList.getKthFromTheEnd(3));
 
+        }
+
+		private static void TryStack()
+		{
+			Helper.print("TEST1", "Using stack to reverse a string 'help!'");
+			var ReversedString = StackOperations.reverse("help!");
+            Console.WriteLine(ReversedString);
+			Helper.print("TEST2", "Using stack to determine the balance of the string");
+            Console.WriteLine(StackOperations.isBalanced("[{abc]}"));
+            Console.WriteLine(StackOperations.isBalanced("[<abc>]"));
+			Helper.print("TEST3", "Test our own stack class, [10, 20, 30]");
+			Stack.push(30);
+			Stack.push(20);
+			Stack.push(10);
+			Stack.push(40);
+			Console.WriteLine(Stack.pop());
+			Console.WriteLine(Stack.peek());
+			Stack.print();
         }
 	}
 }
