@@ -19,11 +19,6 @@ namespace DataStructures.Queue
         public void enqueue(int item)
         {
             if (isFull()) throw new Exception("The queue is full");
-            if (isEmpty())
-            {
-                items[count++] = item;
-                return;
-            }
 
             if (item < items[count - 1])
             {
@@ -33,12 +28,12 @@ namespace DataStructures.Queue
             else items[count++] = item;
         }
 
-        //Another factoring implementaion of the enqueue method
+        //Another factoring implementation of the enqueue method
         public void add(int item)
         {
             if (isFull()) throw new Exception("The queue is full");
 
-            int i = ShiftingItemsToInsert(item);
+            int i = ShiftingItemsToInsert(item); 
             items[i] = item;
             count++;
         }
@@ -60,14 +55,14 @@ namespace DataStructures.Queue
             return count == items.Length;
         }
 
-        public string toString()
+        public void print()
         {
-            string result = "";
             foreach (var item in items)
             {
-                result += item + " ";
+                Console.Write(item);
+                Console.Write(" ");
             }
-            return result;
+            Console.WriteLine();
         }
 
         private void ShiftItemsToSort(int item)
@@ -94,5 +89,7 @@ namespace DataStructures.Queue
             }
             return i + 1;
         }
+
+        
     }
 }

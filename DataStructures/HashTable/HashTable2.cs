@@ -35,7 +35,7 @@ namespace DataStructures.HashTable
                 entry.value = value;
                 return;
             }
-            Entry e = new Entry(key, value);
+            var e = new Entry(key, value);
             LinkedList<Entry> bu = getOrCreateBucket(key);
             bu.AddLast(e);
         }

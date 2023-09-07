@@ -29,7 +29,7 @@ namespace DataStructures.Queue
             else Console.WriteLine("The queue is full");
         }
 
-        public void dequeue()
+        public int dequeue()
         {
             if (!isEmpty())
             {
@@ -37,8 +37,9 @@ namespace DataStructures.Queue
                 array[first] = 0;
                 first = (first + 1) % array.Length;
                 count--;
+                return temp;
             }
-            else Console.WriteLine("The queue is empty");
+            else throw new Exception("The queue is empty");
         }
 
         public int peek()
@@ -61,7 +62,8 @@ namespace DataStructures.Queue
         {
             for (int i = 0; i < array.Length; i++)
             {
-                Console.WriteLine(array[i]);
+                Console.Write(array[i]);
+                Console.Write(" ");
             }
             Console.WriteLine();
         }

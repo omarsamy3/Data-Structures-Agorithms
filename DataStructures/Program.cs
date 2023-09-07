@@ -2,6 +2,7 @@
 using DataStructures.Array;
 using DataStructures.HashTable;
 using DataStructures.LinkedList;
+using DataStructures.Queue;
 using DataStructures.Stack;
 using DataStructures.Tree;
 using System;
@@ -16,7 +17,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
 		{
 			//TryArray();
 			//TryLinkedList();
-			TryStack();
+			//TryStack();
+			TryQueue();
 			//TryHashTable();
 			//TryBinaryTree();
 
@@ -175,5 +177,49 @@ namespace MyApp // Note: actual namespace depends on the project name.
 			Console.WriteLine(Stack.peek());
 			Stack.print();
         }
+
+		private static void TryQueue()
+		{
+			Helper.print("TEST1", "Reverse a queue");
+			var q = new Queue<int>(new List<int>() { 10, 20, 30 });
+            Helper.PrintList(q.ToList());
+            QueueOperations.reverseQueue(q);
+			Helper.PrintList(q.ToList());
+
+			Helper.print("TEST2", "Our Implemented Queue.");
+			var ourQueue = new ArrayQueue(5);
+			ourQueue.print();
+			ourQueue.enqueue(10);
+			ourQueue.enqueue(20);
+			ourQueue.enqueue(30);
+			ourQueue.enqueue(40);
+			ourQueue.enqueue(50);
+			ourQueue.print();
+			ourQueue.dequeue();
+			ourQueue.print();
+			ourQueue.dequeue();
+			ourQueue.dequeue();
+			ourQueue.print();
+			ourQueue.enqueue(60);
+			ourQueue.enqueue(70);
+			ourQueue.enqueue(80);
+			ourQueue.print();
+            Console.WriteLine($"First To remove: {ourQueue.peek()}");
+			ourQueue.dequeue();
+			ourQueue.print();
+
+			Helper.print("TEST3", "Priority Queue");
+			var PQ = new PriorityQueue(5);
+			PQ.add(5);
+			PQ.add(1);
+			PQ.add(3);
+			PQ.add(4);
+			PQ.print();
+			PQ.enqueue(2);
+			PQ.print();
+			PQ.dequeue();
+			PQ.print();
+			
+		}
 	}
 }

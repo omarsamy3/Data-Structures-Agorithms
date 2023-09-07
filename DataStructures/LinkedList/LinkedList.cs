@@ -60,12 +60,14 @@ namespace DataStructures.LinkedList
             int index = 0;
             var current = first;
             while (current != null)
-                if (current.value == item) return index;
-                else
-                {
-                    current = current.next;
-                    index++;
-                }
+            {
+				if (current.value == item) return index;
+				else
+				{
+					current = current.next;
+					index++;
+				}
+			}
 
             return -1;
         }

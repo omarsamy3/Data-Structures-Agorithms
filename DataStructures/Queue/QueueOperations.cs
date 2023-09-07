@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataStructures.Queue
 {
-    internal class Expression
+    internal class QueueOperations
     {
-        public void reverseQueue(Queue<int> queue)
+        public static void reverseQueue(Queue<int> queue)
         {
             if (queue.Count == 0) return;
 

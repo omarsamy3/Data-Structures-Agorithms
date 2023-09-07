@@ -147,3 +147,37 @@ Stacks offer simplicity and efficiency for managing elements in a Last-In-First-
 
 ![Stacks](https://github.com/omarsamy3/Data-Structures-Agorithms/assets/76973221/eb0e0ff8-5384-4722-a440-cafe50d8c5f7)
 
+The queue is a linear data structure that follows the First-In-First-Out (FIFO) principle, which means that the first element added to the queue is the first one to be removed. It is similar to a real-world queue, like people standing in line, where the person who joins the line first is the first to be served.
+
+Here are key characteristics and operations associated with queues:
+
+1. `Enqueue`: Adding an element to the back (rear) of the queue is known as an enqueue operation. New elements are added to the end of the queue.
+
+2. `Dequeue`: Removing an element from the front (head) of the queue is called a dequeue operation. The element at the front of the queue is removed first.
+
+3. `Front`: Accessing the element at the front of the queue without removing it is often referred to as the front operation.
+   `
+4. `Empty`: A queue is considered empty when it contains no elements.
+   `
+5. `Size`: The size of the queue refers to the number of elements currently in the queue.
+   `
+6. `Overflow and Underflow`: In a bounded or fixed-size queue, attempting to enqueue an element when the queue is full results in an overflow. Attempting to dequeue an element from an empty queue results in an underflow.
+   `
+7. `Implementation`: Queues can be implemented using arrays or linked lists. Each implementation has its advantages and trade-offs.
+   `
+8. `Types`: There are different variations of queues, such as priority queues (where elements have associated priorities), double-ended queues (deque), and circular queues.
+
+Queues have various applications in computer science and everyday scenarios:
+
+- `Task scheduling`: In operating systems, queues are used to manage tasks, processes, and threads, ensuring fairness in resource allocation.
+
+- `Breadth-First Search (BFS)`: In graph algorithms, queues are essential for BFS traversal, exploring neighboring nodes level by level.
+
+- `Print job management`: Queues are used in printer spooling to manage and prioritize print jobs.
+
+- `Task execution`: Queues can be used to manage tasks or jobs in multithreaded or parallel programming to control task execution order.
+
+- `Buffering`: In data communication, queues can act as buffers to manage data flow between sender and receiver.
+
+Queues offer a simple and effective way to manage elements in a FIFO manner. 
+They are used in various applications where ordering and scheduling are important, ensuring that tasks or items are processed in a fair and orderly fashion.

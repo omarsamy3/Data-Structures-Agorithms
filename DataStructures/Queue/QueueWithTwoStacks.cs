@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO.Pipes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,5 +44,7 @@ namespace DataStructures.Queue
                 while (Stack1.Count != 0)
                     Stack2.Push(Stack1.Pop());
         }
+
+        
     }
 }

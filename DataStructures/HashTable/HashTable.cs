@@ -10,13 +10,13 @@ namespace DataStructures.HashTable
     {
         #region Notes
         /*
-            Hash Tables or (Dictionaries) >> have (key, value) and don't accept dublicate keys.
-            Sets >> have only keys and also don't accept dublicate keys.
+            Hash Tables or (Dictionaries) >> have (key, value) and don't accept duplicate keys.
+            Sets >> have only keys and also don't accept duplicate keys.
             Hash Functions >> lets you validate the input in the table list as >> they put the input in the right index.
             Collisions >> It occurs when you try to put the input in a reserved place.
             Chaining >> to solve the collision by making a reference for an array to contain the input in the same index.
-            Open Addressing (Linear Probing) to increase the index linearlly to put the input in a free index.
-            Open Addressing (Quadratic Probing) to increase the index Quadraticlly to put the input in a free index.
+            Open Addressing (Linear Probing) to increase the index linearly to put the input in a free index.
+            Open Addressing (Quadratic Probing) to increase the index Quadratically to put the input in a free index.
             Open Addressing (Double Hashing) to increase the index with specific equation to put the input easily in the right free index.
          */
         #endregion
